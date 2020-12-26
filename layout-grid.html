@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "nav section section"
+                "footer footer footer";
+            grid-template-columns: 0.8fr 1.1fr 1.1fr;
+        }
+
+        header {
+            grid-area: header;
+            height: 10em;
+            background-color: coral;
+        }
+
+        header h1 {
+            color: white;
+            margin-left: 2em;
+            margin-top: 2em;
+        }
+
+        nav {
+            grid-area: nav;
+            margin-left: 3em;
+        }
+
+        section {
+            grid-area: section;
+            margin-right: 3em;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: coral;
+            height: 5em;
+        }
+        footer a{
+            
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            margin-left: 4em;
+        }
+        .card {
+            float: left;
+            box-sizing: border-box;
+            padding: 0.6em;
+            margin: 0.4em;
+            border-radius: 0.2em;
+            width: 26.5em;
+            height: 26.5em;
+            box-shadow: 4px 3px gray;
+        }
+
+        .card:hover {
+            box-shadow: 4px 3px coral;
+        }
+
+        .card h1 {
+            font-size: 36px;
+        }
+
+        .card p {
+            padding: 0.6em;
+            text-align: justify;
+        }
+
+        .card img {
+            width: 100%;
+            height: 60%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li a {
+            text-decoration: none;
+            border-bottom: 1px solid coral;
+            padding: 1em;
+            margin-bottom: 0.1em;
+            display: block;
+            color: coral;
+            font-size: 18px;
+            box-sizing: border-box;
+        }
+
+        li a:hover {
+            background-color: coral;
+            color: white;
+        }
+
+        @media (max-width: 1200px) {
+            nav {
+                margin-left: 0em;
+            }
+
+            .container {
+                grid-template-areas:
+                    "header header header"
+                    "nav nav nav"
+                    "section section section"
+                    "footer footer footer";
+            }
+
+            .card {
+                box-sizing: border-box;
+                margin-left: 0.5em;
+                border-radius: 0.2em;
+                width: 47%;
+                box-shadow: 4px 3px gray;
+            }
+
+            .card:hover {
+                box-shadow: 4px 3px coral;
+            }
+            .card p {
+                padding: 0.6em;
+                text-align: justify;
+            }
+
+            .card img {
+                width: 100%;
+            }
+
+            section {
+                margin-right: 0.1em;
+            }
+        }
+
+        @media (max-width: 900px) {
+            nav {
+                margin-left: 0em;
+            }
+
+            .container {
+                grid-template-areas:
+                    "header header header"
+                    "nav nav nav"
+                    "section section section"
+                    "footer footer footer";
+            }
+
+            .card {
+                box-sizing: border-box;
+                margin-left: 0.5em;
+                border-radius: 0.2em;
+                width: 95%;
+                box-shadow: 4px 3px gray;
+            }
+
+            .card:hover {
+                box-shadow: 4px 3px coral;
+            }
+
+            .card h1 {
+                font-size: 36px;
+            }
+
+            .card p {
+                padding: 0.6em;
+                text-align: justify;
+            }
+
+            .card img {
+                box-sizing: border-box;
+                width: 100%;
+                
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Learning CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="">Link</a></li>
+                <li><a href="">Link</a></li>
+                <li><a href="">Link</a></li>
+                <li><a href="">Link</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/567540/pexels-photo-567540.jpeg?auto=compress&cs=tinysrgb"
+                    alt="">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam maiores vel, est vitae
+                    reiciendis maxime, et voluptas pariatur cumque iure repudiandae porro ut corrupti asperiores
+                    perspiciatis nisi repellendus sequi adipisci?</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/567540/pexels-photo-567540.jpeg?auto=compress&cs=tinysrgb"
+                    alt="">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam maiores vel, est vitae
+                    reiciendis maxime, et voluptas pariatur cumque iure repudiandae porro ut corrupti asperiores
+                    perspiciatis nisi repellendus sequi adipisci?</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/567540/pexels-photo-567540.jpeg?auto=compress&cs=tinysrgb"
+                    alt="">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam maiores vel, est vitae
+                    reiciendis maxime, et voluptas pariatur cumque iure repudiandae porro ut corrupti asperiores
+                    perspiciatis nisi repellendus sequi adipisci?</p>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/567540/pexels-photo-567540.jpeg?auto=compress&cs=tinysrgb"
+                    alt="">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam maiores vel, est vitae
+                    reiciendis maxime, et voluptas pariatur cumque iure repudiandae porro ut corrupti asperiores
+                    perspiciatis nisi repellendus sequi adipisci?</p>
+            </div>
+        </section>
+        <footer>
+            <a href="https://www.instagram.com/marcoscti">@marcoscti</a>
+        </footer>
+    </div>
+</body>
+
+</html>
