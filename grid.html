@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <style>
+        /*Criação de variáveis para cores*/
+        :root {
+            --back: 3em;
+            --cor: rgb(180, 200, 255);
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas:
+                "a a b"
+                "a a c"
+                "d e e"
+                "f e e"
+                "g g h"
+                "g g i"
+            ;
+            gap: 0.2em;
+        }
+
+        .a {
+            grid-area: a;
+            background-color: var(--cor);
+        }
+
+        .b {
+            grid-area: b;
+            background-color: var(--cor);
+            height: var(--back);
+        }
+
+        .c {
+            grid-area: c;
+            background-color: var(--cor);
+            height: var(--back);
+        }
+
+        .d {
+            grid-area: d;
+            background-color: var(--cor);
+            height: var(--back);
+        }
+
+        .e {
+            grid-area: e;
+            background-color: var(--cor);
+        }
+
+        .f {
+            grid-area: f;
+            background-color: var(--cor);
+            height: var(--back);
+        }
+
+        .g {
+            grid-area: g;
+            background-color: var(--cor);
+
+        }
+
+        .h {
+            grid-area: h;
+            background-color: var(--cor);
+            height: var(--back);
+        }
+
+        .i {
+            grid-area: i;
+            background-color: var(--cor);
+            height: var(--back);
+        }
+
+        div {
+            text-align: center;
+            font-size: 3em;
+        }
+    </style>
+</head>
+<!--Container para definição da grid-->
+
+<body class="container">
+    <div class="a">A</div>
+    <div class="b">B</div>
+    <div class="c">C</div>
+    <div class="d">D</div>
+    <div class="e">E</div>
+    <div class="f">F</div>
+    <div class="g">G</div>
+    <div class="h">H</div>
+    <div class="i">I</div>
+</body>
+
+</html>
